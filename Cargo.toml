@@ -7,3 +7,10 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1.14.0", features = ["rt", "macros", "rt-multi-thread"] }
+
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+panic = "abort"
+lto = "fat"
